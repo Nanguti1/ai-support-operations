@@ -22,4 +22,9 @@ class Ticket extends Model
             'priority' => TicketPriority::class,
         ];
     }
+
+    public function agentTasks()
+    {
+        return $this->hasMany(AgentTask::class);
+    }
 }
